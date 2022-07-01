@@ -7,15 +7,14 @@ function Book(titles, authors,pages,read) {
     this.read=read;
 
 
-
+}
+function addBookToLibrary(titles, authors,pages,read) {
+let juniorbook = new Book(titles, authors,pages,read) 
+myLibrary.push(juniorbook);
 }
 
-const theHobbit = new Book("Hobbit","Rowling","1","YES");
+addBookToLibrary("HARRY POTTA", "I DONT KNOW", "DONT KNOW  EITHER", "NO, BUT WOULD LIKE");
+addBookToLibrary("HOBBIT", "ROWLING", "IN MY OPINION, 1", "YES");
 
-function addBookToLibrary(itemToArray) {
+console.log(myLibrary[0].title);
 
-myLibrary.push(itemToArray);
-}
-
-addBookToLibrary(theHobbit);
-console.log(myLibrary[0]);
