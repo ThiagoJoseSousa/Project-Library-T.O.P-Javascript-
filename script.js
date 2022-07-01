@@ -18,7 +18,7 @@ addBookToLibrary("HOBBIT", "ROWLING", "IN MY OPINION, 1", "YES");
 
 console.log(myLibrary[0].title);
 
-
+function displayBook (){
 for (element in myLibrary) {
     let container = document.getElementById("container");
     let bloco = document.createElement ("div");
@@ -29,6 +29,10 @@ for (element in myLibrary) {
     container.appendChild(bloco);
     bloco.appendChild(p);
     
-    
+}
     
 }
+displayBook();
+
+
+
