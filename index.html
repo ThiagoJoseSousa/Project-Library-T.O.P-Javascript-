@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <div id="container"></div>
-    <form action="#"
-        onsubmit="displayBook()">
+    <div id="container">
+        <button class="showhide" onclick="document.getElementById('addbook').style.display = 'block';">SHOW FORM</button>
+        <button class="showhide" onclick="document.getElementById('addbook').style.display = 'none';">HIDE FORM</button>
+    </div>
+
+    <form action="#" id="addbook">
         
         <label for="bookTitle">Book title:</label><br>
         <input type="text" id="bookTitle" name="bookTitle"><br>
@@ -29,7 +32,7 @@
         document.getElementById('bookRead').value)">
             Click to send the data
         </button>
-        <button type="submit" > SUBMIT</button>
+        <button type="button" onclick=displayBook()> DISPLAY</button>
 
     </form>
 </body>

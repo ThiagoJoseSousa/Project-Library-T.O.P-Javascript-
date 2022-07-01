@@ -25,14 +25,25 @@ for (element in myLibrary) {
     let p = document.createElement("p");
     p.innerHTML= JSON.stringify(myLibrary[element]);
 
+    
     bloco.classList.add("Books");
     container.appendChild(bloco);
     bloco.appendChild(p);
-    
-}
-    
-}
-displayBook();
 
+    var deleteButton = document.createElement("button");
+    deleteButton.appendChild(document.createTextNode(" Remove "));
+    bloco>p.appendChild(deleteButton).addEventListener("click", removeItem);
+
+    
+    
+}
+function removeItem() {
+    this.parentNode.remove();
+}
+}
+
+
+displayBook();
+// could use regExp
 
 
