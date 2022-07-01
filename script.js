@@ -18,3 +18,17 @@ addBookToLibrary("HOBBIT", "ROWLING", "IN MY OPINION, 1", "YES");
 
 console.log(myLibrary[0].title);
 
+
+for (element in myLibrary) {
+    let container = document.getElementById("container");
+    let bloco = document.createElement ("div");
+    let p = document.createElement("p");
+    p.innerHTML= JSON.stringify(myLibrary[element]);
+
+    bloco.classList.add("Books");
+    container.appendChild(bloco);
+    bloco.appendChild(p);
+    
+    
+    
+}
