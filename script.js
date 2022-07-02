@@ -6,7 +6,7 @@ function Book(titles, authors,pages,read) {
     this.page=pages;
     this.read=read;
 
-
+    
 }
 function addBookToLibrary(titles, authors,pages,read) {
 let juniorbook = new Book(titles, authors,pages,read) 
@@ -14,9 +14,7 @@ myLibrary.push(juniorbook);
 }
 
 addBookToLibrary("HARRY POTTA", "I DONT KNOW", "DONT KNOW  EITHER", "NO, BUT WOULD LIKE");
-addBookToLibrary("HOBBIT", "ROWLING", "IN MY OPINION, 1", "YES");
-
-console.log(myLibrary[0].title);
+addBookToLibrary("HOBBIT", "ROWLING", "IN MY OPINION, 1", "IDONTKNOW");
 
 function displayBook (){
 for (element in myLibrary) {
@@ -34,16 +32,45 @@ for (element in myLibrary) {
     deleteButton.appendChild(document.createTextNode(" Remove "));
     bloco>p.appendChild(deleteButton).addEventListener("click", removeItem);
 
-    
-    
+
+
+    let radiobox = document.createElement('input');
+    radiobox.type = 'radio';
+    radiobox.id='truth'
+    radiobox.name = 'radio';
+    radiobox.value = 'yes'; 
+    radiobox.checked='checked';
+
+    let radiobox1 = document.createElement('input');
+    radiobox1.type = 'radio';
+    radiobox1.name = 'radio';
+    radiobox1.value = 'no';
+
+   bloco>p.appendChild(radiobox);
+   bloco>p.appendChild(radiobox1);
+}
+
 }
 function removeItem() {
     this.parentNode.remove();
 }
+function readChange() { if (document.getElementsById('truth').checked==true) {
+    return this.read="yes"} return this.read==="no"
 }
 
 
-displayBook();
 // could use regExp
 
+// pseudo code: appendChild radio button yes raddio button no
+// book.prototype = function if yes book.read=yes. return book.read=no
 
+Book().prototype.readChange;
+displayBook();
+
+// I had a good code, but confused myself on Debugging and the YES doesnt show up anymore. Well, I could do It so 
+// thats alright. What I couldnt do though is creating a radio button list for each p, but I think that by using variables
+// It's easily achievable. Let's follow up study.
+
+
+
+    
