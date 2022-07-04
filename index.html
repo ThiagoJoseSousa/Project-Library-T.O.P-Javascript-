@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small library app</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <button class="showhide" onclick="document.getElementById('addbook').style.display = 'block';">SHOW FORM</button>
+        <button class="showhide" onclick="document.getElementById('addbook').style.display = 'none';">HIDE FORM</button>
+    </div>
+
+    <form action="#" id="addbook">
+        
+        <label for="bookTitle">Book title:</label><br>
+        <input type="text" id="bookTitle" name="bookTitle"><br>
+        <label for="bookAuthor">Book author:</label><br>
+        <input type="text" id="bookAuthor" name="bookAuthor"><br>
+        <label for="bookPages">Book pages:</label><br>
+        <input type="text" id="bookPages" name="bookPages"><br>
+        <label for="bookRead">Did u read?:</label><br>
+        <input type="text" id="bookRead" name="bookRead"><br>
+        <button type="button" onclick="addBookToLibrary(document.
+        getElementById('bookTitle').value,
+        document.getElementById('bookAuthor').value,
+        document.getElementById('bookPages').value,
+        document.getElementById('bookRead').value)">
+            Click to send the data
+        </button>
+        <button type="button" onclick=displayBook()> DISPLAY</button>
+
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
